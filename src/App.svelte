@@ -1,12 +1,21 @@
 <script>
 	let name = "me";
 
+	let crossTurn = true
+
 	let fields = ["", "", "", "", "", "", "", "", ""]
 
 	function changeField(e){
 		let index = e.target.getAttribute("id")
-		fields[index] = "X"
-		console.log(fields)
+
+		if (fields[index] != "")
+			return
+
+		if (crossTurn)
+			fields[index] = "X"
+		else
+			fields[index] = "O"
+		crossTurn = !crossTurn
 	}
 
 </script>
