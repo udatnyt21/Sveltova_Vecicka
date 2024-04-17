@@ -2,20 +2,34 @@
 	let name = "me";
 
 	let crossTurn = true
+	let ending = ""
 
-	let fields = ["", "", "", "", "", "", "", "", ""]
+	let fields = [
+		["", "", ""], 
+		["", "", ""], 
+		["", "", ""]
+	]
+
+	function checkWinner(){
+		for(let i in fields)
+			if (fields[i] == "")
+				return
+	}
 
 	function changeField(e){
-		let index = e.target.getAttribute("id")
+		let position = e.target.getAttribute("class").split(" ")[0].split(",")
+		console.log(position)
 
-		if (fields[index] != "")
-			return
+		const x = position[0]
+		const y = position[1]
 
 		if (crossTurn)
-			fields[index] = "X"
+			fields[x,y] = "X"
 		else
-			fields[index] = "O"
+			fields[x.y] = "O"
 		crossTurn = !crossTurn
+
+		checkWinner()
 	}
 
 </script>
@@ -24,36 +38,31 @@
 	<h1>Velmi cool piškvorky, made by {name}</h1>
 	<table>
 		<tr>
-			<button id="0" on:click={changeField} >{fields[0]}</button> <button id="1" on:click={changeField}>{fields[1]}</button> <button id="2" on:click={changeField}>{fields[2]}</button>
+			<button class="0,0" on:click={changeField} >{fields[0,0]}</button> <button class="0,1" on:click={changeField}>{fields[0,1]}</button> <button class="0,2" on:click={changeField}>{fields[0,2]}</button>
 		</tr>
 		<tr>
-			<button id="3" on:click={changeField}>{fields[3]}</button> <button id="4" on:click={changeField}>{fields[4]}</button> <button id="5" on:click={changeField}>{fields[5]}</button>
+			<button class="1,0" on:click={changeField}>{fields[1,0]}</button> <button class="1,1" on:click={changeField}>{fields[1,1]}</button> <button class="1,2" on:click={changeField}>{fields[1,2]}</button>
 		</tr>
 		<tr>
-			<button id="6" on:click={changeField}>{fields[6]}</button> <button id="7" on:click={changeField}>{fields[7]}</button> <button id="8" on:click={changeField}>{fields[8]}</button>
+			<button class="2,0" on:click={changeField}>{fields[2,0]}</button> <button class="2,1" on:click={changeField}>{fields[2,1]}</button> <button class="2,2" on:click={changeField}>{fields[2,2]}</button>
 		</tr>
 	</table>
+	<h2>{ending}</h2>
 </main>
 
 <style>
-	h1{
+	h1, h2{
 		text-align: center;
 	}
 
 	button{
+		vertical-align: top;
 		width: 50px;
 		height: 50px;
 	}
 
-	/**table,
-	th,
-	tr {
-		text-align: center;
-		border: 2px solid black;
-		width: 250px;
-		height: 75px;
-		border-collapse: collapse;
+	table{
+		margin: 0 auto;
 	}
-	**/
 
 </style>
