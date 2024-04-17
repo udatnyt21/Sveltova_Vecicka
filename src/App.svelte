@@ -1,30 +1,50 @@
 <script>
-	export let name;
+	let name = "me";
+
+	let fields = ["", "", "", "", "", "", "", "", ""]
+
+	function changeField(e){
+		let index = e.target.getAttribute("id")
+		fields[index] = "X"
+		console.log(fields)
+	}
+
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Velmi cool piškvorky, made by {name}</h1>
+	<table>
+		<tr>
+			<button id="0" on:click={changeField} >{fields[0]}</button> <button id="1" on:click={changeField}>{fields[1]}</button> <button id="2" on:click={changeField}>{fields[2]}</button>
+		</tr>
+		<tr>
+			<button id="3" on:click={changeField}>{fields[3]}</button> <button id="4" on:click={changeField}>{fields[4]}</button> <button id="5" on:click={changeField}>{fields[5]}</button>
+		</tr>
+		<tr>
+			<button id="6" on:click={changeField}>{fields[6]}</button> <button id="7" on:click={changeField}>{fields[7]}</button> <button id="8" on:click={changeField}>{fields[8]}</button>
+		</tr>
+	</table>
 </main>
 
 <style>
-	main {
+	h1{
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	button{
+		width: 50px;
+		height: 50px;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	/**table,
+	th,
+	tr {
+		text-align: center;
+		border: 2px solid black;
+		width: 250px;
+		height: 75px;
+		border-collapse: collapse;
 	}
+	**/
+
 </style>
