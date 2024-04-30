@@ -90,6 +90,9 @@
 
 
 </script>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
 
 <main>
 	<h1>Velmi cool piškvorky</h1>
@@ -109,20 +112,3 @@
 		<button on:click={resetGame}>Reset</button>
 	{/if}
 </main>
-
-<style>
-	h1, h2{
-		text-align: center;
-	}
-
-	button{
-		vertical-align: top;
-		width: 50px;
-		height: 50px;
-	}
-
-	table{
-		margin: 0 auto;
-	}
-
-</style>
