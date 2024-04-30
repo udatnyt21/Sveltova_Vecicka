@@ -398,122 +398,166 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src\\App.svelte";
 
-    function create_fragment(ctx) {
-    	let main;
-    	let h1;
-    	let t2;
-    	let table;
-    	let tr0;
-    	let button0;
-    	let t3_value = /*fields*/ ctx[1][0][0] + "";
-    	let t3;
-    	let t4;
-    	let button1;
-    	let t5_value = /*fields*/ ctx[1][0][1] + "";
-    	let t5;
-    	let t6;
-    	let button2;
-    	let t7_value = /*fields*/ ctx[1][0][2] + "";
-    	let t7;
-    	let t8;
-    	let tr1;
-    	let button3;
-    	let t9_value = /*fields*/ ctx[1][1][0] + "";
-    	let t9;
-    	let t10;
-    	let button4;
-    	let t11_value = /*fields*/ ctx[1][1][1] + "";
-    	let t11;
-    	let t12;
-    	let button5;
-    	let t13_value = /*fields*/ ctx[1][1][2] + "";
-    	let t13;
-    	let t14;
-    	let tr2;
-    	let button6;
-    	let t15_value = /*fields*/ ctx[1][2][0] + "";
-    	let t15;
-    	let t16;
-    	let button7;
-    	let t17_value = /*fields*/ ctx[1][2][1] + "";
-    	let t17;
-    	let t18;
-    	let button8;
-    	let t19_value = /*fields*/ ctx[1][2][2] + "";
-    	let t19;
-    	let t20;
-    	let h2;
-    	let t21;
+    // (108:1) {#if finish}
+    function create_if_block(ctx) {
+    	let button;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
+    			button = element("button");
+    			button.textContent = "Reset";
+    			attr_dev(button, "class", "svelte-689p98");
+    			add_location(button, file, 108, 2, 2666);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*resetGame*/ ctx[4], false, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(108:1) {#if finish}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let main;
+    	let h1;
+    	let t1;
+    	let table;
+    	let tr0;
+    	let button0;
+    	let t2_value = /*fields*/ ctx[2][0][0] + "";
+    	let t2;
+    	let t3;
+    	let button1;
+    	let t4_value = /*fields*/ ctx[2][0][1] + "";
+    	let t4;
+    	let t5;
+    	let button2;
+    	let t6_value = /*fields*/ ctx[2][0][2] + "";
+    	let t6;
+    	let t7;
+    	let tr1;
+    	let button3;
+    	let t8_value = /*fields*/ ctx[2][1][0] + "";
+    	let t8;
+    	let t9;
+    	let button4;
+    	let t10_value = /*fields*/ ctx[2][1][1] + "";
+    	let t10;
+    	let t11;
+    	let button5;
+    	let t12_value = /*fields*/ ctx[2][1][2] + "";
+    	let t12;
+    	let t13;
+    	let tr2;
+    	let button6;
+    	let t14_value = /*fields*/ ctx[2][2][0] + "";
+    	let t14;
+    	let t15;
+    	let button7;
+    	let t16_value = /*fields*/ ctx[2][2][1] + "";
+    	let t16;
+    	let t17;
+    	let button8;
+    	let t18_value = /*fields*/ ctx[2][2][2] + "";
+    	let t18;
+    	let t19;
+    	let h2;
+    	let t20;
+    	let t21;
+    	let mounted;
+    	let dispose;
+    	let if_block = /*finish*/ ctx[1] && create_if_block(ctx);
+
+    	const block = {
+    		c: function create() {
     			main = element("main");
     			h1 = element("h1");
-    			h1.textContent = `Velmi cool piškvorky, made by ${/*name*/ ctx[2]}`;
-    			t2 = space();
+    			h1.textContent = "Velmi cool piškvorky";
+    			t1 = space();
     			table = element("table");
     			tr0 = element("tr");
     			button0 = element("button");
-    			t3 = text(t3_value);
-    			t4 = space();
+    			t2 = text(t2_value);
+    			t3 = space();
     			button1 = element("button");
-    			t5 = text(t5_value);
-    			t6 = space();
+    			t4 = text(t4_value);
+    			t5 = space();
     			button2 = element("button");
-    			t7 = text(t7_value);
-    			t8 = space();
+    			t6 = text(t6_value);
+    			t7 = space();
     			tr1 = element("tr");
     			button3 = element("button");
-    			t9 = text(t9_value);
-    			t10 = space();
+    			t8 = text(t8_value);
+    			t9 = space();
     			button4 = element("button");
-    			t11 = text(t11_value);
-    			t12 = space();
+    			t10 = text(t10_value);
+    			t11 = space();
     			button5 = element("button");
-    			t13 = text(t13_value);
-    			t14 = space();
+    			t12 = text(t12_value);
+    			t13 = space();
     			tr2 = element("tr");
     			button6 = element("button");
-    			t15 = text(t15_value);
-    			t16 = space();
+    			t14 = text(t14_value);
+    			t15 = space();
     			button7 = element("button");
-    			t17 = text(t17_value);
-    			t18 = space();
+    			t16 = text(t16_value);
+    			t17 = space();
     			button8 = element("button");
-    			t19 = text(t19_value);
-    			t20 = space();
+    			t18 = text(t18_value);
+    			t19 = space();
     			h2 = element("h2");
-    			t21 = text(/*ending*/ ctx[0]);
+    			t20 = text(/*ending*/ ctx[0]);
+    			t21 = space();
+    			if (if_block) if_block.c();
     			attr_dev(h1, "class", "svelte-689p98");
-    			add_location(h1, file, 88, 1, 1788);
+    			add_location(h1, file, 94, 1, 1910);
     			attr_dev(button0, "class", "0,0 svelte-689p98");
-    			add_location(button0, file, 91, 3, 1856);
+    			add_location(button0, file, 97, 3, 1962);
     			attr_dev(button1, "class", "0,1 svelte-689p98");
-    			add_location(button1, file, 91, 71, 1924);
+    			add_location(button1, file, 97, 71, 2030);
     			attr_dev(button2, "class", "0,2 svelte-689p98");
-    			add_location(button2, file, 91, 138, 1991);
-    			add_location(tr0, file, 90, 2, 1847);
+    			add_location(button2, file, 97, 138, 2097);
+    			add_location(tr0, file, 96, 2, 1953);
     			attr_dev(button3, "class", "1,0 svelte-689p98");
-    			add_location(button3, file, 94, 3, 2079);
+    			add_location(button3, file, 100, 3, 2185);
     			attr_dev(button4, "class", "1,1 svelte-689p98");
-    			add_location(button4, file, 94, 70, 2146);
+    			add_location(button4, file, 100, 70, 2252);
     			attr_dev(button5, "class", "1,2 svelte-689p98");
-    			add_location(button5, file, 94, 137, 2213);
-    			add_location(tr1, file, 93, 2, 2070);
+    			add_location(button5, file, 100, 137, 2319);
+    			add_location(tr1, file, 99, 2, 2176);
     			attr_dev(button6, "class", "2,0 svelte-689p98");
-    			add_location(button6, file, 97, 3, 2301);
+    			add_location(button6, file, 103, 3, 2407);
     			attr_dev(button7, "class", "2,1 svelte-689p98");
-    			add_location(button7, file, 97, 70, 2368);
+    			add_location(button7, file, 103, 70, 2474);
     			attr_dev(button8, "class", "2,2 svelte-689p98");
-    			add_location(button8, file, 97, 137, 2435);
-    			add_location(tr2, file, 96, 2, 2292);
+    			add_location(button8, file, 103, 137, 2541);
+    			add_location(tr2, file, 102, 2, 2398);
     			attr_dev(table, "class", "svelte-689p98");
-    			add_location(table, file, 89, 1, 1836);
+    			add_location(table, file, 95, 1, 1942);
     			attr_dev(h2, "class", "svelte-689p98");
-    			add_location(h2, file, 100, 1, 2524);
-    			add_location(main, file, 87, 0, 1779);
+    			add_location(h2, file, 106, 1, 2630);
+    			add_location(main, file, 93, 0, 1901);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -521,40 +565,42 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
-    			append_dev(main, t2);
+    			append_dev(main, t1);
     			append_dev(main, table);
     			append_dev(table, tr0);
     			append_dev(tr0, button0);
-    			append_dev(button0, t3);
-    			append_dev(tr0, t4);
+    			append_dev(button0, t2);
+    			append_dev(tr0, t3);
     			append_dev(tr0, button1);
-    			append_dev(button1, t5);
-    			append_dev(tr0, t6);
+    			append_dev(button1, t4);
+    			append_dev(tr0, t5);
     			append_dev(tr0, button2);
-    			append_dev(button2, t7);
-    			append_dev(table, t8);
+    			append_dev(button2, t6);
+    			append_dev(table, t7);
     			append_dev(table, tr1);
     			append_dev(tr1, button3);
-    			append_dev(button3, t9);
-    			append_dev(tr1, t10);
+    			append_dev(button3, t8);
+    			append_dev(tr1, t9);
     			append_dev(tr1, button4);
-    			append_dev(button4, t11);
-    			append_dev(tr1, t12);
+    			append_dev(button4, t10);
+    			append_dev(tr1, t11);
     			append_dev(tr1, button5);
-    			append_dev(button5, t13);
-    			append_dev(table, t14);
+    			append_dev(button5, t12);
+    			append_dev(table, t13);
     			append_dev(table, tr2);
     			append_dev(tr2, button6);
-    			append_dev(button6, t15);
-    			append_dev(tr2, t16);
+    			append_dev(button6, t14);
+    			append_dev(tr2, t15);
     			append_dev(tr2, button7);
-    			append_dev(button7, t17);
-    			append_dev(tr2, t18);
+    			append_dev(button7, t16);
+    			append_dev(tr2, t17);
     			append_dev(tr2, button8);
-    			append_dev(button8, t19);
-    			append_dev(main, t20);
+    			append_dev(button8, t18);
+    			append_dev(main, t19);
     			append_dev(main, h2);
-    			append_dev(h2, t21);
+    			append_dev(h2, t20);
+    			append_dev(main, t21);
+    			if (if_block) if_block.m(main, null);
 
     			if (!mounted) {
     				dispose = [
@@ -573,21 +619,35 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*fields*/ 2 && t3_value !== (t3_value = /*fields*/ ctx[1][0][0] + "")) set_data_dev(t3, t3_value);
-    			if (dirty & /*fields*/ 2 && t5_value !== (t5_value = /*fields*/ ctx[1][0][1] + "")) set_data_dev(t5, t5_value);
-    			if (dirty & /*fields*/ 2 && t7_value !== (t7_value = /*fields*/ ctx[1][0][2] + "")) set_data_dev(t7, t7_value);
-    			if (dirty & /*fields*/ 2 && t9_value !== (t9_value = /*fields*/ ctx[1][1][0] + "")) set_data_dev(t9, t9_value);
-    			if (dirty & /*fields*/ 2 && t11_value !== (t11_value = /*fields*/ ctx[1][1][1] + "")) set_data_dev(t11, t11_value);
-    			if (dirty & /*fields*/ 2 && t13_value !== (t13_value = /*fields*/ ctx[1][1][2] + "")) set_data_dev(t13, t13_value);
-    			if (dirty & /*fields*/ 2 && t15_value !== (t15_value = /*fields*/ ctx[1][2][0] + "")) set_data_dev(t15, t15_value);
-    			if (dirty & /*fields*/ 2 && t17_value !== (t17_value = /*fields*/ ctx[1][2][1] + "")) set_data_dev(t17, t17_value);
-    			if (dirty & /*fields*/ 2 && t19_value !== (t19_value = /*fields*/ ctx[1][2][2] + "")) set_data_dev(t19, t19_value);
-    			if (dirty & /*ending*/ 1) set_data_dev(t21, /*ending*/ ctx[0]);
+    			if (dirty & /*fields*/ 4 && t2_value !== (t2_value = /*fields*/ ctx[2][0][0] + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*fields*/ 4 && t4_value !== (t4_value = /*fields*/ ctx[2][0][1] + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*fields*/ 4 && t6_value !== (t6_value = /*fields*/ ctx[2][0][2] + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*fields*/ 4 && t8_value !== (t8_value = /*fields*/ ctx[2][1][0] + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*fields*/ 4 && t10_value !== (t10_value = /*fields*/ ctx[2][1][1] + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*fields*/ 4 && t12_value !== (t12_value = /*fields*/ ctx[2][1][2] + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*fields*/ 4 && t14_value !== (t14_value = /*fields*/ ctx[2][2][0] + "")) set_data_dev(t14, t14_value);
+    			if (dirty & /*fields*/ 4 && t16_value !== (t16_value = /*fields*/ ctx[2][2][1] + "")) set_data_dev(t16, t16_value);
+    			if (dirty & /*fields*/ 4 && t18_value !== (t18_value = /*fields*/ ctx[2][2][2] + "")) set_data_dev(t18, t18_value);
+    			if (dirty & /*ending*/ 1) set_data_dev(t20, /*ending*/ ctx[0]);
+
+    			if (/*finish*/ ctx[1]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.m(main, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+    			if (if_block) if_block.d();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -607,7 +667,6 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
-    	let name = "me";
     	let crossTurn = true;
     	let ending = "";
     	let finish = false;
@@ -620,7 +679,7 @@ var app = (function () {
     		const y = parseInt(position[1]);
     		console.log(x, y);
     		if (fields[x][y] != "") return;
-    		if (crossTurn) $$invalidate(1, fields[x][y] = "X", fields); else $$invalidate(1, fields[x][y] = "O", fields);
+    		if (crossTurn) $$invalidate(2, fields[x][y] = "X", fields); else $$invalidate(2, fields[x][y] = "O", fields);
     		crossTurn = !crossTurn;
     		checkWinner();
     	}
@@ -669,14 +728,20 @@ var app = (function () {
 
     		if (draw) {
     			console.log("Draw");
-    			finish = true;
+    			$$invalidate(1, finish = true);
     		}
     	}
 
     	function announceWinner(winner) {
     		console.log(winner);
     		$$invalidate(0, ending = "Winner is " + winner);
-    		finish = true;
+    		$$invalidate(1, finish = true);
+    	}
+
+    	function resetGame() {
+    		$$invalidate(1, finish = false);
+    		$$invalidate(0, ending = "");
+    		for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) $$invalidate(2, fields[i][j] = "", fields);
     	}
 
     	const writable_props = [];
@@ -686,29 +751,28 @@ var app = (function () {
     	});
 
     	$$self.$capture_state = () => ({
-    		name,
     		crossTurn,
     		ending,
     		finish,
     		fields,
     		changeField,
     		checkWinner,
-    		announceWinner
+    		announceWinner,
+    		resetGame
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     		if ('crossTurn' in $$props) crossTurn = $$props.crossTurn;
     		if ('ending' in $$props) $$invalidate(0, ending = $$props.ending);
-    		if ('finish' in $$props) finish = $$props.finish;
-    		if ('fields' in $$props) $$invalidate(1, fields = $$props.fields);
+    		if ('finish' in $$props) $$invalidate(1, finish = $$props.finish);
+    		if ('fields' in $$props) $$invalidate(2, fields = $$props.fields);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [ending, fields, name, changeField];
+    	return [ending, finish, fields, changeField, resetGame];
     }
 
     class App extends SvelteComponentDev {
